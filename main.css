@@ -1,0 +1,63 @@
+/*Philip yeh, This is the css file */
+.container2{
+  margin-bottom: 40px;
+}
+
+.scrabbleTile {
+
+    width:130px;
+    height:130px;
+
+}
+
+.boardTile {
+  width:130px;
+  height:130px;
+
+}
+.jumbotron{
+  text-align: center;
+  background-color: grey;
+  color: white;
+}
+
+img {
+    margin-left:5px;
+    margin-right:5px;
+}
+/*rack container and the player rack itself*/
+#rack {
+    width:1100px;
+    height:240px;
+    position: relative;
+}
+
+#playerRack {
+    position: absolute;
+    bottom: 45px;
+    left: 75px;
+}
+
+
+
+#boardDiv {
+    padding: 20px;
+    margin-left: 10px;
+
+}
+
+#Buttons{
+  background-color: steelblue;
+}
+
+
+/*styling for table */
+#tileLeft td  {
+    border: 1px solid red;
+    padding: 15px;
+    border-spacing: 20px;
+}
+
+#tileLeft table{
+  margin-bottom: 30px;
+}

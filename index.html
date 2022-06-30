@@ -1,0 +1,135 @@
+<!-- Philip yeh, this is the HTML document for the scrabble table I made, linked the JS and css Files -->
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <title>Scrabble!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Libaries used  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.js"></script>
+
+    <link rel="stylesheet" href="./main.css">
+    <script src="./scrabble.js"></script>
+</head>
+
+
+<div class="container">
+<!-- jumbotron header -->
+    <div class="container">
+        <div class="jumbotron ">
+            <h1>Scrabble!</h1>
+        </div>
+    </div>
+
+
+<!--container to hold buttons-->
+    <div class="container">
+        <div id="Buttons">
+            <button onclick="buildRack()" id="newTilesButton">Refresh All Tiles</button>
+
+            <button onclick="reset()" id="resetButton">Reset</button>
+
+            <h3>Score:<span id="scoreSpan">0</span></h3>
+
+        </div>
+
+
+
+<!--container to to hold the playing board row, with imgs-->
+    <div class="container" id="boardDiv">
+        <table>
+            <tr>
+                <td>
+                  <img id="1" class="boardTile" title="double" src="./img/Scrabble_Board_Double_Letter.JPG">
+                </td>
+                <td>
+                  <img id="2" class="boardTile" title="blank" src="./img/Scrabble_Board_Blank.JPG">
+                </td>
+                <td>
+                  <img id="3" class="boardTile" title="blank" src="./img/Scrabble_Board_Blank.JPG">
+                </td>
+                <td>
+                  <img id="4" class="boardTile" title="triple" src="./img/Scrabble_Board_Triple_Word.jpg">
+                </td>
+                <td>
+                  <img id="5" class="boardTile" title="blank" src="./img/Scrabble_Board_Blank.JPG">
+                </td>
+                <td>
+                  <img id="6" class="boardTile" title="blank" src="./img/Scrabble_Board_Blank.JPG">
+                </td>
+                <td>
+                  <img id="7" class="boardTile" title="double" src="./img/Scrabble_Board_Double_Letter.JPG">
+                </td>
+                <td>
+                  <img id="8" class="boardTile" title="blank" src="./img/Scrabble_Board_Blank.JPG">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+<!--container to player rack-->
+    <div class="container" id="rack">
+        <img id="rack" src="./img/scrabbleTileRack3.jpg">
+        <div id="playerRack">
+        </div>
+    </div>
+
+<!--container to hold remainder tiles "bag" "made into a table"-->
+    <div class="container2" >
+
+        <table id="tileLeft">
+            <h2>Remaining Tiles</h2>
+            <tr>
+                <td>A:<span id="A">0</span></td>
+                <td>B:<span id="B">0</span></td>
+                <td>C:<span id="C">0</span></td>
+                <td>D:<span id="D">0</span></td>
+                <td>E:<span id="E">0</span></td>
+                <td>F:<span id="F">0</span></td>
+                <td>G:<span id="G">0</span></td>
+                <td>H:<span id="H">0</span></td>
+                <td>I:<span id="I">0</span></td>
+            </tr>
+            <tr>
+
+                <td>J:<span id="J">0</span></td>
+                <td>K:<span id="K">0</span></td>
+                <td>L:<span id="L">0</span></td>
+                <td>M:<span id="M">0</span></td>
+                <td>N:<span id="N">0</span></td>
+                <td>O:<span id="O">0</span></td>
+                <td>P:<span id="P">0</span></td>
+                <td>Q:<span id="Q">0</span></td>
+                <td>R:<span id="R">0</span></td>
+            </tr>
+            <tr>
+                <td>S:<span id="S">0</span></td>
+                <td>T:<span id="T">0</span></td>
+                <td>U:<span id="U">0</span></td>
+                <td>V:<span id="V">0</span></td>
+                <td>W:<span id="W">0</span></td>
+                <td>X:<span id="X">0</span></td>
+                <td>Y:<span id="Y">0</span></td>
+                <td>Z:<span id="Z">0</span></td>
+                <td>_:<span id="Blank">0</span></td>
+            </tr>
+        </table>
+    </div>
+    </div>
+
+
+
+</div>
+
+
+
+</html>
